@@ -11,9 +11,6 @@ var cors = require('cors');
 app.use(cors({optionSuccessStatus: 200}));  // some legacy browsers choke on 204
 
 
-app.get("/api/whoami",(req,res)=>{
-  res.json({ipaddress:req.connection.remoteAddress,language:req.connection.language});
-});
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
